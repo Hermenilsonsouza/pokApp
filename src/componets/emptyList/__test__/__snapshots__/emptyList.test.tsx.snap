@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmptyList /> should render <EmptyList /> 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/assets/images/error.png",
+    }
+  }
+  style={
+    Object {
+      "height": 666.6666666666666,
+      "width": 750,
+    }
+  }
+/>
+`;
