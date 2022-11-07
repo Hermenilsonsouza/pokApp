@@ -3,11 +3,12 @@ import * as S from './card.styles';
 
 type cardType = {
   title: String;
+  onPress: () => void;
 };
 
-const card = ({title}: cardType) => {
+const card = ({title, onPress}: cardType) => {
   return (
-    <S.Container>
+    <S.Container onPress={onPress}>
       <S.Title>{title}</S.Title>
     </S.Container>
   );
