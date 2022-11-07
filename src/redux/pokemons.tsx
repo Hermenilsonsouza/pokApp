@@ -4,7 +4,8 @@ import type {PayloadAction} from '@reduxjs/toolkit';
 
 export type pokemonTypes = {
   name: string;
-  url: String;
+  url: string;
+  id?: string;
 };
 
 export type State = {
@@ -15,15 +16,13 @@ export type State = {
 const userAPI = 'https://pokeapi.co/api/v2/pokemon';
 
 export const fetchPokemons = createAsyncThunk('Pokemons/fetchAll', async () => {
-  const params = {
-    params: {
-      offset: 9,
-      limit: 9,
-    },
-  };
   const response = await axios.get(userAPI, {
-    params: params,
+    params: {
+      offset: 30,
+      limit: 30,
+    },
   });
+
   return response.data.results;
 });
 
